@@ -48,9 +48,11 @@
   position: absolute;
   color: maroon;
   top: 400px;
-  animation: slowfade infinite alternate 15s linear 5s;
+  animation: slowfade infinite 10s linear;
   padding: 10px;
   cursor: pointer;
+    
+  /* animation: slowfade-alt infinite alternate 10s linear 5s; */
 }
 
 .come-in {
@@ -63,7 +65,7 @@
   color: mediumspringgreen;
   top: 405px;
   opacity: 0;
-  animation: fadein infinite alternate 10s linear 10s;
+  animation: comeuppance infinite 10s linear;
   padding: 10px;
   cursor: pointer;
 }
@@ -77,7 +79,7 @@
   }
 }
 
-@keyframes slowfade {
+@keyframes slowfade-alt {
   from {
     opacity: 1;
   }
@@ -86,12 +88,58 @@
   }
 }
 
+@keyframes slowfade {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0; 
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes comeuppance {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1; 
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+
 @keyframes fadein {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes dont-appear {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 0
   }
 }
 
